@@ -1,6 +1,5 @@
 import django_filters
 from rest_framework import viewsets, filters
-
 from .models import User, Emotion, Track
 from .serializer import UserSerializer, EmotionSerializer, TrackSerializer
 

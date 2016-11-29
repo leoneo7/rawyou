@@ -1,12 +1,16 @@
 from rest_framework import serializers
-
 from .models import User, Emotion, Track
 
 
 class UserSerializer(serializers.ModelSerializer):
+    access_token = serializers.SerializerMethodField()
+
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ('authorization_key', 'access_token')
+
+    def get_access_token(self, obj):
+        return obj.createAccessToken()
 
 
 class EmotionSerializer(serializers.ModelSerializer):
