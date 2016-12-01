@@ -1,0 +1,12 @@
+http GET localhost:8000/api/ 'Authorization: Token e193152b296bbfe76e2622715128023297271a11'
+
+http GET localhost:8000/api/users/
+http POST localhost:8000/api/users/ username='' password='r1K8bB3io5SC'
+
+http GET localhost:8000/api/emotions/
+http POST localhost:8000/api/emotions/ emotion_name=''
+
+http GET localhost:8000/api/tracks/ 'Authorization: Token e193152b296bbfe76e2622715128023297271a11'
+http POST localhost:8000/api/tracks/ emotion='1' 'Authorization: Token e193152b296bbfe76e2622715128023297271a11'
+
+http POST localhost:8000/api-auth-token/ username='' password=''
